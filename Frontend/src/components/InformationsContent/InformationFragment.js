@@ -1,8 +1,9 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 import classes from "./InformationFragment.module.css";
 
-const InformationFragment = (props) => {
+const InformationFragment = React.memo((props) => {
   return (
     <li className={classes["list-item"]}>
       <NavLink to={`/obavestenja/${props.id}`} activeClassName={classes.active}>
@@ -11,6 +12,6 @@ const InformationFragment = (props) => {
       </NavLink>
     </li>
   );
-};
+});
 
 export default InformationFragment;

@@ -5,10 +5,22 @@
   padding: 0;
   margin: 0;
   min-width: 0;
+  height: 100%;
+  width: 100%;
   text-align: center;
   list-style: none;
   overflow-x: auto;
   overflow-y: hidden;
+}
+
+.error-text {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  color: #b40e0e;
+  font-weight: bold;
+  text-align: center;
 }
 
 @media (max-width: 1025px) and (orientation: landscape) {
@@ -25,7 +37,6 @@
     flex-direction: column;
     padding: 0 1.5rem;
     width: 17rem;
-    height: fit-content;
     max-height: 75vh;
     overflow-x: hidden;
     overflow-y: auto;

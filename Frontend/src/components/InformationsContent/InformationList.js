@@ -1,28 +1,45 @@
-import { useContext } from "react";
+import React, { Fragment, useContext, useEffect, useMemo } from "react";
 
 import classes from "./InformationList.module.css";
 
+import LoadingSpinner from "../UI/LoadingSpinner";
 import InfoContext from "../../store/info-context";
 import InformationFragment from "./InformationFragment";
 
 const InformationList = () => {
-  const infoCtx = useContext(InfoContext);
+  const { informations, infoAreLoading, loadingError, fetchNotifications } =
+    useContext(InfoContext);
 
-  const infoList = infoCtx.informations?.map((info) => (
-    <InformationFragment
-      key={info.id}
-      id={info.id}
-      title={info.title}
-      date={info.date}
-    />
-  ));
+  useEffect(() => {
+    if (!informations) {
+      fetchNotifications();
+    }
+  }, [informations, fetchNotifications]);
+
+  const infoList = useMemo(
+    () =>
+      informations?.map((info) => (
+        <InformationFragment
+          key={info.id}
+          id={info.id}
+          title={info.title}
+          date={info.date}
+        />
+      )),
+    [informations]
+  );
 
   return (
-    <ul className={classes.list}>
-      {!infoCtx.infoAreLoading && infoList}
-      {infoCtx.infoAreLoading && <p>Обавештења се учитавају...</p>}
-    </ul>
+    <Fragment>
+      {!infoAreLoading && !loadingError && (
+        <ul className={classes.list}>{infoList}</ul>
+      )}
+      {infoAreLoading && <LoadingSpinner />}
+      {!infoAreLoading && loadingError && (
+        <p className={classes["error-text"]}>{loadingError}</p>
+      )}
+    </Fragment>
   );
 };
 
-export default InformationList;
+export default React.memo(InformationList);
