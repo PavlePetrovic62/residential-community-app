@@ -1,10 +1,12 @@
 import * as React from "react";
 import { Fragment, useState } from "react";
-import { motion, AnimatePresence, wrap } from "framer-motion";
+import { AnimatePresence, wrap } from "framer-motion";
 import { images } from "./image-data";
 
-import Modal from "../UI/Modal";
 import classes from "./ImageGallery.module.css";
+
+import Modal from "../UI/Modal";
+import MotionProgressiveImage from "./ProgressiveImage";
 
 const variants = {
   enter: (direction) => {
@@ -32,7 +34,7 @@ const swipePower = (offset, velocity) => {
   return Math.abs(offset) * velocity;
 };
 
-const NewGallery = () => {
+const ImageGallery = () => {
   const [openModal, setOpenModal] = useState(false);
   const [[page, direction], setPage] = useState([0, 0]);
 
@@ -61,9 +63,11 @@ const NewGallery = () => {
         >
           <AnimatePresence initial={false} custom={direction}>
             <div className={classes.fullscreenImage}>
-              <motion.img
+              <MotionProgressiveImage
                 key={page}
                 src={images[imageIndex].img}
+                placeholderSrc={images[imageIndex].thumb}
+                width={images[imageIndex].width}
                 custom={direction}
                 variants={variants}
                 initial="enter"
@@ -113,4 +117,4 @@ const NewGallery = () => {
   );
 };
 
-export default NewGallery;
+export default ImageGallery;

@@ -12,10 +12,10 @@ import Blok5 from "../../assets/Blok5.jpg";
 import Blok6 from "../../assets/Blok6.jpg";
 
 export const images = [
-  { thumb: Thumb1, img: Blok1 },
-  { thumb: Thumb2, img: Blok2 },
-  { thumb: Thumb3, img: Blok3 },
-  { thumb: Thumb4, img: Blok4 },
-  { thumb: Thumb5, img: Blok5 },
-  { thumb: Thumb6, img: Blok6 },
+  { thumb: Thumb1, img: Blok1, width: "4032" },
+  { thumb: Thumb2, img: Blok2, width: "4032" },
+  { thumb: Thumb3, img: Blok3, width: "4032" },
+  { thumb: Thumb4, img: Blok4, width: "4032" },
+  { thumb: Thumb5, img: Blok5, width: "4032" },
+  { thumb: Thumb6, img: Blok6, width: "4032" },
 ];

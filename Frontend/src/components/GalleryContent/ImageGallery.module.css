@@ -51,6 +51,16 @@
   max-height: 100%;
 }
 
+.img-loading {
+  filter: blur(10px);
+  clip-path: inset(0);
+}
+
+.img-loaded {
+  filter: blur(0px);
+  transition: filter 500 linear;
+}
+
 .next,
 .prev {
   top: calc(50% - 20px);
