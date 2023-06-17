@@ -12,7 +12,6 @@ import UsefulInfo from "./pages/UsefulInfo";
 import Gallery from "./pages/Gallery";
 import Documents from "./pages/Documents";
 import Finances from "./pages/Finances";
-import InformationContent from "./pages/InformationContent";
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -43,11 +42,8 @@ function App() {
           <Route path="/o-nama">
             <AboutUs />
           </Route>
-          <Route path="/obavestenja" exact>
+          <Route path="/obavestenja">
             <Informations />
-          </Route>
-          <Route path="/obavestenja/:infoId">
-            <InformationContent />
           </Route>
           <Route path="/korisne-informacije">
             <UsefulInfo />
