@@ -92,6 +92,7 @@ const AuthForm = (props) => {
           <input
             type="text"
             id="username"
+            autoComplete="username"
             onChange={usernameChangeHandler}
             onBlur={usernameBlurHandler}
             value={usernameValue}
@@ -107,6 +108,7 @@ const AuthForm = (props) => {
           <input
             type="password"
             id="password"
+            autoComplete="password"
             onChange={passwordChangeHandler}
             onBlur={passwordBlurHandler}
             value={passwordValue}
