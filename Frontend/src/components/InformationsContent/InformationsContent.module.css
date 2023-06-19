@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   width: 100%;
@@ -11,7 +11,7 @@
 .infoListCard {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
   width: 100%;
   height: minmax(fit-content, calc(100% - 6.75rem));
 }
@@ -21,7 +21,6 @@
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
-  height: 100%;
 }
 
 .singleInfoCard {
@@ -35,26 +34,26 @@
 .singleInfoCard > div {
   display: flex;
   width: 100%;
-  height: 100%;
 }
 
 @media (max-width: 1025px) and (orientation: landscape) {
   .wrapper {
     width: 100%;
     flex-direction: row;
+    align-items: flex-start;
     gap: 0.5rem;
   }
 
   .infoListCard {
     max-height: 100%;
+    width: fit-content;
   }
 
   .infoListCard > div {
-    max-height: 100%;
+    width: fit-content;
   }
 
   .singleInfoCard {
-    width: 100%;
     max-height: 100%;
   }
 }
@@ -73,7 +72,7 @@
   }
 
   .infoListCard {
-    width: fit-content;
+    max-width: 17rem;
     height: fit-content;
   }
 }
