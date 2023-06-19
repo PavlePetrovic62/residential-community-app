@@ -2,6 +2,11 @@
 
 This is a simple application made for a residential community. It's purpose is to make the important information flow between residents easier.
 
+## Live version on a free hosting service
+
+The prototype of the app is live at the following link:
+https://sz-jg-122.onwebapp.io/
+
 ## Features
 
 **_Before listing the features, it is important to say that this version of the app is solely focused on the frontend part and serves as a prototype and an example of functionality. Therefore, it includes hardcoded dummy data and lorem text on certain pages. This is because the backend part is still in development, and when I finish and publish the app, dummy data will be replaced with real one. The app itself is in serbian language (cyrillic) because it will eventually be deployed to serbian speaking users, but I will list the pages here in correct order so you can compare them and click accordingly if you do not speak serbian. Features which do not exist right now but are planned to be added later are crossed out and marked with "(future)" after them._**
