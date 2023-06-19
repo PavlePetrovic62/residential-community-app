@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect, useMemo } from "react";
+import { Fragment, useContext, useEffect, useMemo } from "react";
 
 import classes from "./InformationList.module.css";
 
@@ -42,4 +42,4 @@ const InformationList = () => {
   );
 };
 
-export default React.memo(InformationList);
+export default InformationList;
