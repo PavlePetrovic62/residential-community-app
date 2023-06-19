@@ -31,9 +31,7 @@ export const InfoContextProvider = (props) => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(
-        "http://sz-jg-122.onwebapp.io/api/notifications"
-      );
+      const response = await fetch("api/notifications");
       const responseData = await response.json();
       const transformedInfo = responseData.notifications.map((infoData) => {
         return {
