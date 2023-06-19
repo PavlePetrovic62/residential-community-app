@@ -4,7 +4,7 @@ This is a simple application made for a residential community. It's purpose is t
 
 ## Live version on a free hosting service
 
-The prototype of the app is live at the following link:  
+The prototype of the app is live at the following link (not working in Safari because Apple is blocking this hosting service):  
 https://sz-jg-122.onwebapp.io/
 
 ## Features
