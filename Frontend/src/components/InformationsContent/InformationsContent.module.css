@@ -1,7 +1,6 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 1rem;
   width: 100%;
@@ -11,7 +10,7 @@
 .infoListCard {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem;
   width: 100%;
   height: minmax(fit-content, calc(100% - 6.75rem));
 }
@@ -72,6 +71,7 @@
   }
 
   .infoListCard {
+    padding-top: 1rem;
     max-width: 17rem;
     height: fit-content;
   }
